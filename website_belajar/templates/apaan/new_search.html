@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h2 style="text-align: center">{{ search | title}}</h2>
+
+
+
+    <div class="row">
+        {% for post in final_post2 %}
+    <div class="col s12 m6">
+      <div class="card teal darken-4 ">
+        <div class="card-content white-text">
+          <p><a href="{{ post.2}}">{{ post.0}}</a></p>
+            <p>
+                <br>
+            </p>
+            <p>harga</p>
+          <p>{{ post.1}}.</p>
+        </div>
+        <div class="card-action">
+        </div>
+      </div>
+    </div>
+        {% endfor %}
+  </div>
+
+
+    <div class="row">
+        {% for post in final_post %}
+        <div class="col s4">
+            <div class="card">
+                <div class="card-image">
+                    <a href="{{ post.1}}"><img src="{{ post.3}}"alt=""></a>
+                </div>
+                <div class="card-content">
+                    <p>{{ post.0}}<a href="{{ post.2}}"></a></p>
+                </div>
+                <div class="card-action">
+                    <a href="{{ post.2}}">view listing price :
+                        <br>
+                        {{ post.1}}</p></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
